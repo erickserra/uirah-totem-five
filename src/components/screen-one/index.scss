@@ -1,0 +1,54 @@
+@keyframes shaking {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.screen-one-wrapper {
+  height: 100%;
+  width: 100%;
+  background-size: 100% 100%;
+  padding-top: 18vh;
+  position: relative;
+
+  .botoes-wrapper {
+    display: flex;
+    width: 85%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 auto;
+
+    div {
+      margin-top: 2vh;
+      max-width: 41vw;
+      position: relative;
+
+      img {
+        width: 100%;
+      }
+
+      button {
+        border: 0;
+        background: transparent;
+        padding: 0;
+        margin: 0;
+        position: absolute;
+        bottom: 2vh;
+        width: 28vw;
+        z-index: 1;
+        left: 7vw;
+
+        &:active > img{
+          filter: brightness(1.2);
+        }
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
